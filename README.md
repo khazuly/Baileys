@@ -255,7 +255,8 @@ const sock = makeWASocket({
 if (!sock.authState.creds.registered) {
     const number = 'XXXXXXXXXXX'
     const code = await sock.requestPairingCode(number) // or await sock.requestPairingCode(number, 'KH4Z-ABCD') custom your pairing code
-    console.log(code) // KH4Z-KH41
+    const displayCode = code.replace(/(.{4})(.{4})/, '$1-$2')
+    console.log(displayCode) // KH4Z-KH41
 }
 ```
 
