@@ -21,6 +21,9 @@
   "author": "KH4Z",
 
   "main": "lib/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "files": [
     "lib/*",
     "WAProto/*",
